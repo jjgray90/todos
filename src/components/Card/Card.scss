@@ -1,2 +1,24 @@
+@use "../../assets/sass/variables" as *;
+
 .card {
+  border: $border;
+  border-radius: $border-radius;
+  height: 60px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50px 1fr 50px;
+  gap: 0.5rem;
+
+  &__checkbox {
+    height: unset;
+  }
+
+  &__text {
+    text-decoration: line-through;
+  }
+
+  &__icon {
+    border: unset;
+    background-color: unset;
+  }
 }
