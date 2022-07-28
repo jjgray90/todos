@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 
-const InputField = ({ handleInput }) => {
+const InputField = ({ handleInput, placeholder }) => {
   const [text, setText] = useState("");
   return (
     <form
@@ -18,6 +18,7 @@ const InputField = ({ handleInput }) => {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
+        placeholder={placeholder}
       />
       <button type="submit" className="input-field__icon" value="submit">
         <FontAwesomeIcon icon={faCirclePlus} />

@@ -10,7 +10,10 @@ const NavBar = ({ handleInput, resetTodos }) => {
         <Button btnText="Reset" />
       </div>
       <div className="nav-bar__input-field">
-        <InputField handleInput={handleInput} />
+        <InputField
+          handleInput={handleInput}
+          placeholder="Add your task here..."
+        />
       </div>
     </div>
   );
