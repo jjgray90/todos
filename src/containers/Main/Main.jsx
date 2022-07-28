@@ -1,0 +1,11 @@
+import "./Main.scss";
+
+const Main = () => {
+  return (
+    <div className="main">
+      <p>Main works</p>
+    </div>
+  );
+};
+
+export default Main;
