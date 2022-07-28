@@ -1,11 +1,9 @@
 import "./Main.scss";
 
-const Main = () => {
-  return (
-    <div className="main">
-      <p>Main works</p>
-    </div>
-  );
+const Main = ({ todos }) => {
+  const todosJSX = todos.map((todo) => <p key={todo}>{todo}</p>);
+
+  return <div className="main">{todosJSX}</div>;
 };
 
 export default Main;

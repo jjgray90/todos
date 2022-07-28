@@ -8,7 +8,10 @@ const InputField = ({ handleInput }) => {
   return (
     <form
       className="input-field"
-      onSubmit={(event) => handleInput(event, text)}
+      onSubmit={(e) => {
+        handleInput(e, text);
+        setText("");
+      }}
     >
       <input
         className="input-field__input"
