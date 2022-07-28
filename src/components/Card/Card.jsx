@@ -22,10 +22,7 @@ const Card = ({ todo, removeCard, cardIndex }) => {
         type="checkbox"
         onChange={(e) => handleCheck(e)}
       />
-      <p className={`card__text ${strikeThrough}`}>
-        {todo}
-        {cardIndex}
-      </p>
+      <p className={`card__text ${strikeThrough}`}>{todo}</p>
       <button className="card__icon" onClick={() => removeCard(cardIndex)}>
         <FontAwesomeIcon icon={faTrashCan} />
       </button>

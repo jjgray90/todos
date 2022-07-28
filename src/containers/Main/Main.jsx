@@ -11,7 +11,13 @@ const Main = ({ todos, removeCard }) => {
     />
   ));
 
-  return <div className="main">{todosJSX}</div>;
+  return (
+    <div className="main">
+      {todos.length < 1
+        ? "Nothing to see here yet...Add a task in the field above! 👆"
+        : todosJSX}
+    </div>
+  );
 };
 
 export default Main;

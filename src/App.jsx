@@ -8,7 +8,10 @@ const App = () => {
 
   const handleInput = (event, string) => {
     event.preventDefault();
-    setTodos([...todos, string]);
+
+    string.length < 1
+      ? alert("Please Enter a todo")
+      : setTodos([...todos, string]);
   };
 
   const removeCard = (index) => {
