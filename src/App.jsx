@@ -15,9 +15,11 @@ const App = () => {
     setTodos([...todos.slice(0, index), ...todos.slice(index + 1)]);
   };
 
+  const resetTodos = () => setTodos([]);
+
   return (
     <div className="app">
-      <NavBar handleInput={handleInput} />
+      <NavBar handleInput={handleInput} resetTodos={resetTodos} />
       <Main todos={todos} removeCard={removeCard} />
     </div>
   );
