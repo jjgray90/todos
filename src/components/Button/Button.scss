@@ -1,2 +1,9 @@
+@use "../../assets/sass/variables" as *;
+
 .button {
+  background-color: unset;
+  border: $border;
+  border-radius: $border-radius;
+  padding: 0.5rem;
+  font-weight: bold;
 }

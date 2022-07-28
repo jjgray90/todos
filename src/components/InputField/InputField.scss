@@ -1,2 +1,22 @@
+@use "../../assets/sass/variables" as *;
+
 .input-field {
+  border: $border;
+  border-radius: $border-radius;
+  height: 2.5rem;
+  //   padding: 0 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__input {
+    height: 100%;
+    width: 100%;
+    border: unset;
+    background-color: unset;
+  }
+
+  &__icon {
+    padding: 0 0.5rem;
+  }
 }

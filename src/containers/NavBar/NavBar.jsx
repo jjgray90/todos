@@ -7,7 +7,7 @@ const NavBar = () => {
     <div className="nav-bar">
       <h1 className="nav-bar__heading">My Todos</h1>
       <div className="nav-bar__button">
-        <Button />
+        <Button btnText="Reset" />
       </div>
       <div className="nav-bar__input-field">
         <InputField />
