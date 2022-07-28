@@ -1,15 +1,25 @@
 import "./InputField.scss";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 
-const InputField = () => {
+const InputField = ({ handleInput }) => {
+  const [text, setText] = useState("");
   return (
-    <div className="input-field">
-      <input className="input-field__input" type="text" />
-      <div className="input-field__icon">
+    <form
+      className="input-field"
+      onSubmit={(event) => handleInput(event, text)}
+    >
+      <input
+        className="input-field__input"
+        type="text"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
+      <button type="submit" className="input-field__icon" value="submit">
         <FontAwesomeIcon icon={faCirclePlus} />
-      </div>
-    </div>
+      </button>
+    </form>
   );
 };
 
